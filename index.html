@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List - Fadhlina </title>
 
     <!--CSS ExternaL File-->
     <link rel="stylesheet" href="CSS\style.css">
@@ -11,13 +11,41 @@
 <body>
 
     <!--Header Section-->
-    <header></header>
-
+    <header class="main-header">
+        <h1>My ToDo List</h1>
+    </header>
+    
     <!--Main Content Section-->
-    <main></main>
+    <main>
+        <section class="todo-app">
+    <!-- Form Tambah Task -->
+    <div class="input-group">
+      <input type="text" id="todo-input" placeholder="Add a new task..." />
+      <input type="date" id="todo-date"/>
+      <button id="add-btn" onclick="addTask()">Add</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-group">
+      <select id="filter-select" onchange="filterTasks()">
+        <option value="all">All</option>
+        <option value="done">Done</option>
+        <option value="pending">Pending</option>
+      </select>
+      <button onclick="deleteAllTasks()">Delete All</button>
+    </div>
+
+    <!-- Daftar Task -->
+    <ul id="task-list">
+      <li>No tasks added yet</li>
+    </ul>
+  </section>
+    </main>
 
     <!--Footer Section-->
-    <footer></footer>
+    <footer class="main-footer">
+        <p>© 2025 Fadhlina | ToDo Web App</p>
+    </footer>
     
     <!--JavaScript External File-->
     <script src="js\script.js"></script>
